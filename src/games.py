@@ -8,6 +8,69 @@ from src.base import (
 )
 
 
+class CODUO(CODBase):
+    game = "coduo"
+    _main_game_leaderboards = [
+        MainGameLeaderboard(
+            id="9kvn58dg",
+            name="Any% Greenhorn",
+            params={
+                "var-kn0m020l": "p12r8e7l",
+            },
+            percentage=60,
+        ),
+        MainGameLeaderboard(
+            id="9kvn58dg",
+            name="Any% Greenhorn",
+            params={
+                "var-kn0m020l": "81pvgwg1",
+            },
+            percentage=30,
+        ),
+    ]
+    _il_leaderboards = [
+        LevelSectionLeaderboard(
+            levels=[
+                ILLeaderboard(id="5wkk6vpw", name="Bois Jacques"),
+                ILLeaderboard(id="5920q13d", name="Crossroads"),
+                ILLeaderboard(id="29vm7vl9", name="Foy"),
+                ILLeaderboard(id="xd402mr9", name="Noville"),
+                ILLeaderboard(id="xd0kqj49", name="Bomber"),
+                ILLeaderboard(id="rw6qo0gd", name="Train Bridge"),
+                ILLeaderboard(id="n93q4pzw", name="Sicily 1"),
+                ILLeaderboard(id="z98r70pd", name="Sicily 2"),
+                ILLeaderboard(id="rdnozv7w", name="Trenches"),
+                ILLeaderboard(id="ldy1gvrd", name="Ponyri"),
+                ILLeaderboard(id="gdrpxvlw", name="Kursk"),
+                ILLeaderboard(id="nwlgove9", name="Kharkov 1"),
+                ILLeaderboard(id="ywe2577w", name="Kharkov 2"),
+            ],
+            category="mkeov99d",
+            percentage=60,
+        ),
+        LevelSectionLeaderboard(
+            levels=[
+                ILLeaderboard(id="5wkk6vpw", name="Bois Jacques"),
+                ILLeaderboard(id="5920q13d", name="Crossroads"),
+                ILLeaderboard(id="29vm7vl9", name="Foy"),
+                ILLeaderboard(id="xd402mr9", name="Noville"),
+                ILLeaderboard(id="xd0kqj49", name="Bomber"),
+                ILLeaderboard(id="rw6qo0gd", name="Train Bridge"),
+                ILLeaderboard(id="n93q4pzw", name="Sicily 1"),
+                ILLeaderboard(id="z98r70pd", name="Sicily 2"),
+                ILLeaderboard(id="rdnozv7w", name="Trenches"),
+                ILLeaderboard(id="ldy1gvrd", name="Ponyri"),
+                ILLeaderboard(id="gdrpxvlw", name="Kursk"),
+                ILLeaderboard(id="nwlgove9", name="Kharkov 1"),
+                ILLeaderboard(id="ywe2577w", name="Kharkov 2"),
+            ],
+            category="jdznlr6d",
+            name="ILs Veteran",
+            percentage=30,
+        ),
+    ]
+
+
 class COD1(CODBase):
     game = "cod1"
     _main_game_leaderboards = [
@@ -1720,7 +1783,7 @@ class MW2022(CODBase):
             params={
                 "var-p855yd08": "p1282g21",
             },
-            percentage=90,
+            percentage=80,
         ),
         MainGameLeaderboard(
             id="rklzryw2",
@@ -1753,7 +1816,7 @@ class MW2022(CODBase):
                 ILLeaderboard(id="xd4og329", name="Countdown"),
             ],
             category="ndx04qjd",
-            percentage=90,
+            percentage=80,
         ),
         LevelSectionLeaderboard(
             levels=[
@@ -1775,8 +1838,73 @@ class MW2022(CODBase):
                 ILLeaderboard(id="29vrnk3w", name="Ghost Team"),
                 ILLeaderboard(id="xd4og329", name="Countdown"),
             ],
-            percentage=45,
+            percentage=40,
             category="jdzo6l62",
+            name="ILs Veteran",
+        ),
+    ]
+
+
+class MW2023(CODBase):
+    game = "mw2023"
+    _main_game_leaderboards = [
+        MainGameLeaderboard(
+            id="wk6g9oed",
+            name="Any% Recruit",
+            params={
+                "var-gnx390jn": "1dkv8kgl",
+            },
+            percentage=80,
+        ),
+        MainGameLeaderboard(
+            id="wk6g9oed",
+            name="Any% Veteran",
+            params={
+                "var-gnx390jn": "q8k2vk6q",
+            },
+            percentage=30,
+        ),
+    ]
+    _il_leaderboards = [
+        LevelSectionLeaderboard(
+            levels=[
+                ILLeaderboard(id="xd1exqew", name="Operation 627"),
+                ILLeaderboard(id="ewpmrlkw", name="Precious Cargo"),
+                ILLeaderboard(id="y9mq8n5d", name="Reactor"),
+                ILLeaderboard(id="5wkzp32w", name="Payload"),
+                ILLeaderboard(id="592g5yow", name="Deep Cover"),
+                ILLeaderboard(id="29ve2q3d", name="Passenger"),
+                ILLeaderboard(id="xd47xl2d", name="Crash Site"),
+                ILLeaderboard(id="xd0rx8xd", name="Flashpoint"),
+                ILLeaderboard(id="rw6p3zr9", name="Oligarch"),
+                ILLeaderboard(id="n935ornw", name="Highrise"),
+                ILLeaderboard(id="z98vnxgw", name="Frozen Tundra"),
+                ILLeaderboard(id="rdnjnyq9", name="Gora Dam"),
+                ILLeaderboard(id="n935orzw", name="Danger Close"),
+                ILLeaderboard(id="ldy72okd", name="Trojan Horse"),
+            ],
+            category="n2y6w3ed",
+            percentage=80,
+        ),
+        LevelSectionLeaderboard(
+            levels=[
+                ILLeaderboard(id="xd1exqew", name="Operation 627"),
+                ILLeaderboard(id="ewpmrlkw", name="Precious Cargo"),
+                ILLeaderboard(id="y9mq8n5d", name="Reactor"),
+                ILLeaderboard(id="5wkzp32w", name="Payload"),
+                ILLeaderboard(id="592g5yow", name="Deep Cover"),
+                ILLeaderboard(id="29ve2q3d", name="Passenger"),
+                ILLeaderboard(id="xd47xl2d", name="Crash Site"),
+                ILLeaderboard(id="xd0rx8xd", name="Flashpoint"),
+                ILLeaderboard(id="rw6p3zr9", name="Oligarch"),
+                ILLeaderboard(id="n935ornw", name="Highrise"),
+                ILLeaderboard(id="z98vnxgw", name="Frozen Tundra"),
+                ILLeaderboard(id="rdnjnyq9", name="Gora Dam"),
+                ILLeaderboard(id="n935orzw", name="Danger Close"),
+                ILLeaderboard(id="ldy72okd", name="Trojan Horse"),
+            ],
+            percentage=40,
+            category="7kjyxqgk",
             name="ILs Veteran",
         ),
     ]
@@ -1791,7 +1919,7 @@ class MW2SR(CODBase):
             params={
                 "var-r8r41yrn": "rqv8g3r1",
             },
-            percentage=50,
+            percentage=90,
         ),
         MainGameLeaderboard(
             id="9d851mld",
@@ -1799,7 +1927,7 @@ class MW2SR(CODBase):
             params={
                 "var-r8r41yrn": "5lej9dm1",
             },
-            percentage=25,
+            percentage=45,
         ),
     ]
     _il_leaderboards = [
@@ -1824,7 +1952,7 @@ class MW2SR(CODBase):
                 ILLeaderboard(id="ewpvg8lw", name="Endgame"),
             ],
             category="zd35n3rk",
-            percentage=50,
+            percentage=90,
         ),
     ]
 
@@ -1902,6 +2030,7 @@ class COD4SR(CODBase):
 
 
 games: List[Type[CODBase]] = [
+    CODUO,
     COD1,
     COD2,
     COD3,
@@ -1922,6 +2051,7 @@ games: List[Type[CODBase]] = [
     BOCW,
     CODVNG,
     MW2022,
+    MW2023,
     MW2SR,
     COD4SR,
 ]

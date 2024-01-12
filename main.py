@@ -270,16 +270,22 @@ def _dump_runs_sheet(wb: openpyxl.Workbook):
 
 def _create_charts(wb: openpyxl.Workbook):
     _game_data: typing.Dict[str, int] = {}
+    game_order = [game.game for game in games]
 
     for player in players.values():
         for run in player.runs:
             _run_count = _game_data.get(run.game, 0)
             _game_data[run.game] = _run_count + 1
 
+    # Sort the game data by the order of the games
+    sorted_game_data = sorted(
+        _game_data.items(), key=lambda item: game_order.index(item[0])
+    )
+
     # Create raw sheet for referencing data
     raw_sheet: Worksheet = wb.create_sheet("Raw")
     raw_sheet.append(["Game", "Runs"])
-    for game, runs in _game_data.items():
+    for game, runs in sorted_game_data:
         raw_sheet.append([game, runs])
 
     chart = BarChart()
@@ -328,7 +334,7 @@ def dump():
     _dump_game_breakdown_sheet(wb)
     _create_charts(wb)
 
-    wb.save("output.xlsx")
+    wb.save("codpointsoutput/output.xlsx")
 
 
 if __name__ == "__main__":
