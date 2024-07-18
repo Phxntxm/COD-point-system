@@ -9,6 +9,7 @@ RUN pip install pipenv
 RUN pipenv install --system --deploy
 
 COPY main.py /app/
+COPY token.json /app/
 
 COPY src /app/src
 

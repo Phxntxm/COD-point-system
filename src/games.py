@@ -21,7 +21,7 @@ class CODUO(CODBase):
         ),
         MainGameLeaderboard(
             id="9kvn58dg",
-            name="Any% Greenhorn",
+            name="Any% Veteran",
             params={
                 "var-kn0m020l": "81pvgwg1",
             },
@@ -76,35 +76,57 @@ class COD1(CODBase):
     _main_game_leaderboards = [
         MainGameLeaderboard(
             id="mkej1n26",
-            name="Any% Recruit",
+            name="Any% Greenhorn NG",
             params={
                 "var-yn2jm2j8": "9qjv5yeq",
+                "var-gnxwj648": "81w2ngo1",
             },
-            percentage=90,
-        ),
-        MainGameLeaderboard(
-            id="7dgrvglk",
-            name="Glitchless Recruit",
-            params={
-                "var-yn2jm2j8": "9qjv5yeq",
-            },
-            percentage=60,
+            percentage=100,
         ),
         MainGameLeaderboard(
             id="mkej1n26",
-            name="Any% Veteran",
+            name="Any% Greenhorn NG+",
             params={
-                "var-yn2jm2j8": "81wzkwo1",
+                "var-yn2jm2j8": "9qjv5yeq",
+                "var-gnxwj648": "zqoe50pl",
             },
-            percentage=45,
+            percentage=50,
         ),
         MainGameLeaderboard(
             id="7dgrvglk",
-            name="Glitchless Veteran",
+            name="Any% Veteran NG",
             params={
                 "var-yn2jm2j8": "81wzkwo1",
+                "var-gnxwj648": "81w2ngo1",
             },
-            percentage=30,
+            percentage=50,
+        ),
+        MainGameLeaderboard(
+            id="7dgrvglk",
+            name="Any% Veteran NG+",
+            params={
+                "var-yn2jm2j8": "81wzkwo1",
+                "var-gnxwj648": "zqoe50pl",
+            },
+            percentage=25,
+        ),
+        MainGameLeaderboard(
+            id="mkej1n26",
+            name="Glitchless Greenhorn NG",
+            params={
+                "var-yn2jm2j8": "9qjv5yeq",
+                "var-gnxwj648": "81w2ngo1",
+            },
+            percentage=50,
+        ),
+        MainGameLeaderboard(
+            id="7dgrvglk",
+            name="Glitchless Veteran NG",
+            params={
+                "var-yn2jm2j8": "81wzkwo1",
+                "var-gnxwj648": "81w2ngo1",
+            },
+            percentage=25,
         ),
     ]
     _il_leaderboards = [
@@ -138,7 +160,7 @@ class COD1(CODBase):
                 ILLeaderboard(id="z98jlv7w", name="Berlin"),
             ],
             category="7dg8xn42",
-            percentage=90,
+            percentage=100,
         ),
         LevelSectionLeaderboard(
             levels=[
@@ -171,7 +193,7 @@ class COD1(CODBase):
             ],
             category="02qr4gyk",
             name="ILs Veteran",
-            percentage=45,
+            percentage=50,
         ),
     ]
 
@@ -820,7 +842,7 @@ class BO2(CODBase):
                 "var-ylqo6mw8": "81p9j68q",
                 "var-e8mq5rwn": "p127n44q",
             },
-            percentage=80,
+            percentage=90,
         ),
         MainGameLeaderboard(
             id="jdrwz6gk",
@@ -829,7 +851,7 @@ class BO2(CODBase):
                 "var-ylqo6mw8": "xqkvd6kl",
                 "var-e8mq5rwn": "p127n44q",
             },
-            percentage=40,
+            percentage=45,
         ),
         MainGameLeaderboard(
             id="jdrwz6gk",
@@ -838,7 +860,7 @@ class BO2(CODBase):
                 "var-ylqo6mw8": "81p9j68q",
                 "var-e8mq5rwn": "z19n3d8q",
             },
-            percentage=60,
+            percentage=65,
         ),
         MainGameLeaderboard(
             id="jdrwz6gk",
@@ -852,7 +874,7 @@ class BO2(CODBase):
         MainGameLeaderboard(
             id="zdnr07q2",
             name="Strikeforce% Recruit",
-            percentage=40,
+            percentage=45,
         ),
         MainGameLeaderboard(
             id="zdnr07q2",
@@ -860,7 +882,7 @@ class BO2(CODBase):
             params={
                 "var-6njkz5vl": "81p9jvvq",
             },
-            percentage=20,
+            percentage=22,
         ),
     ]
     _il_leaderboards = [
@@ -921,7 +943,7 @@ class Ghosts(CODBase):
             params={
                 "var-gnxj59gl": "z19vmvkl",
             },
-            percentage=80,
+            percentage=90,
         ),
         MainGameLeaderboard(
             id="z273jod0",
@@ -929,7 +951,7 @@ class Ghosts(CODBase):
             params={
                 "var-gnxj59gl": "p12kdkk1",
             },
-            percentage=40,
+            percentage=45,
         ),
     ]
     _il_leaderboards = [
@@ -955,7 +977,7 @@ class Ghosts(CODBase):
                 ILLeaderboard(id="5wkk6lpw", name="The Ghost Killer"),
             ],
             category="wkpj91vk",
-            percentage=80,
+            percentage=90,
         ),
         LevelSectionLeaderboard(
             levels=[
@@ -978,7 +1000,7 @@ class Ghosts(CODBase):
                 ILLeaderboard(id="y9m5xzxd", name="Loki"),
                 ILLeaderboard(id="5wkk6lpw", name="The Ghost Killer"),
             ],
-            percentage=40,
+            percentage=45,
             category="jdrrj90d",
             name="ILs Veteran",
         ),
@@ -1569,7 +1591,7 @@ class MW2R(CODBase):
             params={
                 "var-j846rxwl": "21dr22gq",
             },
-            percentage=80,
+            percentage=90,
         ),
         MainGameLeaderboard(
             id="824g4pn2",
@@ -1606,7 +1628,7 @@ class MW2R(CODBase):
                 ),
             ],
             category="xd1gpmwd",
-            percentage=80,
+            percentage=90,
         ),
         LevelSectionLeaderboard(
             levels=[
@@ -1629,7 +1651,7 @@ class MW2R(CODBase):
                 ILLeaderboard(id="ewp0qmld", name="Just Like Old Times"),
                 ILLeaderboard(id="y9m1pql9", name="Endgame"),
             ],
-            percentage=40,
+            percentage=45,
             category="9kv6oq82",
             name="ILs Veteran",
         ),

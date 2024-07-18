@@ -167,5 +167,6 @@ runs.json
 # Secrets
 client_secrets.json
 storage.json
+token.json
 
 test.py

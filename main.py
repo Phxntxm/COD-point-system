@@ -1,15 +1,20 @@
 import argparse
 import json
+import os
 import typing
 
+import gspread
 import openpyxl
 from openpyxl.cell import Cell
 from openpyxl.chart import BarChart, Reference
 from openpyxl.styles import Border, PatternFill, Side
 from openpyxl.worksheet.worksheet import Worksheet
+import pandas as pd
 
 from src.games import games
 from src.base import players, Player, Run
+
+OUTPUT_FILE = "codpointsoutput/output.xlsx"
 
 
 def _autosize_column(ws: Worksheet):
@@ -73,9 +78,9 @@ def _dump_totals_sheet(wb: openpyxl.Workbook):
     end_start = False
 
     for i, player in enumerate(_players):
-        A = Cell(ws, value=f"{i + 1}")
-        B = Cell(ws, value=f"{player.name}")
-        C = Cell(ws, value=f"{player.total_points}")
+        A = Cell(ws, value=f"{i + 1}")  # type: ignore
+        B = Cell(ws, value=f"{player.name}")  # type: ignore
+        C = Cell(ws, value=f"{player.total_points}")  # type: ignore
 
         ws.append([A, B, C])
 
@@ -295,7 +300,7 @@ def _create_charts(wb: openpyxl.Workbook):
     chart.add_data(data, titles_from_data=True)
     chart.set_categories(labels)
 
-    wb["Totals"].add_chart(chart, "G9")
+    wb["Totals"].add_chart(chart, "G9")  # type: ignore
 
 
 def from_json():
@@ -334,7 +339,25 @@ def dump():
     _dump_game_breakdown_sheet(wb)
     _create_charts(wb)
 
-    wb.save("codpointsoutput/output.xlsx")
+    wb.save(OUTPUT_FILE)
+
+
+def upload():
+    if not os.path.exists("token.json"):
+        raise Exception("token.json not found")
+
+    gc = gspread.service_account(filename="token.json")  # type: ignore
+    sh = gc.open_by_key("1GDZOL2nklQGk6D4hND43sd3s3-4qLHM3GFHeeX54-ZM")
+
+    file = pd.ExcelFile(OUTPUT_FILE)
+
+    for name in file.sheet_names:
+        assert isinstance(name, str)
+        data = file.parse(name)
+
+        worksheet = sh.worksheet(name)
+        worksheet.clear()
+        worksheet.update([data.columns.values.tolist()] + data.values.tolist())
 
 
 if __name__ == "__main__":
@@ -355,5 +378,6 @@ if __name__ == "__main__":
         to_json()
 
     dump()
+    upload()
 
     print("Done!")
